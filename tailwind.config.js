@@ -1,7 +1,11 @@
 module.exports = {
     content: ["index.html", "./src/**/*.{js,html}"],
     theme: {
-        extend: {},
+        extend: {
+            height: {
+                "dynamic-screen": "100dvh",
+            },
+        },
     },
     plugins: [],
 };
