@@ -3,7 +3,7 @@ module.exports = {
     theme: {
         extend: {
             height: {
-                "dynamic-screen": "100dvh",
+                "dynamic-screen": ["100vh", "100dvh"],
             },
         },
     },
