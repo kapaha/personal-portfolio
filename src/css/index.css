@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+label,
+input,
+textarea {
+    @apply block w-full text-zinc-800;
+}
+
+input,
+textarea {
+    @apply rounded-md border bg-white px-4 py-3 shadow transition-shadow hover:shadow-md;
+}
+
+label {
+    @apply py-2 font-semibold;
+}
+
+label:has(+ :required) {
+    @apply after:text-red-400 after:content-['_*'];
+}
