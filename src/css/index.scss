@@ -15,8 +15,8 @@ textarea {
 
 label {
     @apply py-2 font-semibold;
-}
 
-label:has(+ :required) {
-    @apply after:text-red-400 after:content-['_*'];
+    &:has(+ :required) {
+        @apply after:text-red-400 after:content-['_*'];
+    }
 }

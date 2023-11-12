@@ -4,28 +4,207 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
+            href="/apple-touch-icon.png"
             rel="apple-touch-icon"
             sizes="180x180"
-            href="/apple-touch-icon.png"
         />
         <link
-            rel="icon"
             type="image/png"
-            sizes="32x32"
             href="/favicon-32x32.png"
+            rel="icon"
+            sizes="32x32"
         />
         <link
-            rel="icon"
             type="image/png"
-            sizes="16x16"
             href="/favicon-16x16.png"
+            rel="icon"
+            sizes="16x16"
         />
-        <link rel="manifest" href="/site.webmanifest" />
+        <link href="/site.webmanifest" rel="manifest" />
         <title>Kai Paterson-Hall | Portfolio</title>
     </head>
 
-    <body class="bg-zinc-900 text-white">
-        <main>
+    <body class="bg-zinc-900 text-white md:grid">
+        <header class="header">
+            <!-- Hamburger button -->
+            <button
+                class="hamburger hamburger--collapse"
+                data-mobile-menu-toggler
+            >
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+
+            <!-- Mobile menu -->
+            <ul class="flex flex-grow flex-col justify-center space-y-4">
+                <li>
+                    <a
+                        class="block py-2 text-center text-2xl opacity-0 transition-all duration-500 hover:bg-zinc-800 md:text-4xl [.menu-opened_&]:opacity-100"
+                        data-mobile-menu-toggler
+                        href="#"
+                        tabindex="-1"
+                    >
+                        About Me
+                    </a>
+                </li>
+                <li>
+                    <a
+                        class="block py-2 text-center text-2xl opacity-0 transition-all duration-500 hover:bg-zinc-800 md:text-4xl [.menu-opened_&]:opacity-100"
+                        data-mobile-menu-toggler
+                        href="#projects"
+                        tabindex="-1"
+                    >
+                        My Projects
+                    </a>
+                </li>
+                <li>
+                    <a
+                        class="block py-2 text-center text-2xl opacity-0 transition-all duration-500 hover:bg-zinc-800 md:text-4xl [.menu-opened_&]:opacity-100"
+                        data-mobile-menu-toggler
+                        href="#"
+                        tabindex="-1"
+                    >
+                        Coding Examples
+                    </a>
+                </li>
+                <li>
+                    <a
+                        class="block py-2 text-center text-2xl opacity-0 transition-all duration-500 hover:bg-zinc-800 md:text-4xl [.menu-opened_&]:opacity-100"
+                        data-mobile-menu-toggler
+                        href="#"
+                        tabindex="-1"
+                    >
+                        SCS Scheme
+                    </a>
+                </li>
+                <li>
+                    <a
+                        class="block py-2 text-center text-2xl opacity-0 transition-all duration-500 hover:bg-zinc-800 md:text-4xl [.menu-opened_&]:opacity-100"
+                        data-mobile-menu-toggler
+                        href="#contact"
+                        tabindex="-1"
+                    >
+                        Contact Me
+                    </a>
+                </li>
+            </ul>
+
+            <div
+                class="flex items-center justify-evenly gap-4 py-4 opacity-0 transition-opacity duration-500 [.menu-opened_&]:opacity-100"
+            >
+                <a
+                    class="text-4xl transition-colors hover:text-orange-400"
+                    href="https://www.linkedin.com/in/kaipatersonhall/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    tabindex="-1"
+                >
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a
+                    class="text-4xl transition-colors hover:text-orange-400"
+                    href="https://github.com/kapaha"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    tabindex="-1"
+                >
+                    <i class="fa-brands fa-square-github"></i>
+                </a>
+                <a
+                    class="text-4xl transition-colors hover:text-orange-400"
+                    href="https://twitter.com/kapahaweb"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    tabindex="-1"
+                >
+                    <i class="fa-brands fa-square-twitter"></i>
+                </a>
+            </div>
+        </header>
+
+        <!-- Side menu -->
+        <div
+            class="fixed hidden h-full w-[300px] border-r-4 border-orange-400 bg-zinc-900 shadow lg:block"
+        >
+            <p
+                class="flex items-center justify-center border-b-4 border-orange-400 text-[9rem] font-bold uppercase"
+            >
+                K
+            </p>
+
+            <ul class="mt-10 flex flex-col text-center text-2xl">
+                <li>
+                    <a
+                        class="block py-4 decoration-orange-400 hover:underline"
+                        href="#"
+                    >
+                        About Me
+                    </a>
+                </li>
+                <li>
+                    <a
+                        class="block py-4 decoration-orange-400 hover:underline"
+                        href="#projects"
+                    >
+                        My Projects
+                    </a>
+                </li>
+                <li>
+                    <a
+                        class="block py-4 decoration-orange-400 hover:underline"
+                        href="#"
+                    >
+                        Coding Examples
+                    </a>
+                </li>
+                <li>
+                    <a
+                        class="block py-4 decoration-orange-400 hover:underline"
+                        href="#"
+                    >
+                        SCS Scheme
+                    </a>
+                </li>
+                <li>
+                    <a
+                        class="block py-4 decoration-orange-400 hover:underline"
+                        href="#contact"
+                    >
+                        Contact Me
+                    </a>
+                </li>
+            </ul>
+
+            <div class="mt-10 flex items-center justify-center gap-4">
+                <a
+                    class="text-4xl transition-colors hover:text-orange-400"
+                    href="https://www.linkedin.com/in/kaipatersonhall/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a
+                    class="text-4xl transition-colors hover:text-orange-400"
+                    href="https://github.com/kapaha"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <i class="fa-brands fa-square-github"></i>
+                </a>
+                <a
+                    class="text-4xl transition-colors hover:text-orange-400"
+                    href="https://twitter.com/kapahaweb"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <i class="fa-brands fa-square-twitter"></i>
+                </a>
+            </div>
+        </div>
+
+        <main class="lg:ml-[300px]">
             <!-- Hero -->
             <div
                 class="container mx-auto flex h-dynamic-screen flex-col items-center justify-center px-6 font-bold"
@@ -35,17 +214,20 @@
                 >
                     Hi,
                     <br />
-                    I'm <span class="text-orange-400">Kai</span>,
+                    I'm
+                    <span class="text-orange-400">Kai</span>
+                    ,
                     <br />
                     <span
                         class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
-                        >Web Developer</span
                     >
+                        Web Developer
+                    </span>
                 </h1>
             </div>
 
             <!-- Project Cards -->
-            <div class="bg-slate-800 p-6 md:p-8 lg:p-10">
+            <div class="bg-slate-800 p-6 md:p-8 lg:p-10" id="projects">
                 <div
                     class="container mx-auto space-y-6 md:space-y-8 lg:space-y-10"
                 >
@@ -59,7 +241,7 @@
                     </h2>
 
                     <div
-                        class="mx-auto grid max-w-screen-xl justify-center gap-6 sm:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:gap-10"
+                        class="mx-auto grid max-w-screen-xl justify-center gap-6 sm:grid-cols-2 md:gap-8 lg:gap-10 xl:grid-cols-3"
                     >
                         <div
                             class="flex max-w-xs flex-col overflow-hidden rounded-xl bg-zinc-900 shadow"
@@ -87,28 +269,28 @@
                                     <img
                                         class="rounded-md"
                                         src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"
-                                        alt="Made with React JS"
                                         title="Made with React JS"
+                                        alt="Made with React JS"
                                     />
                                     <img
                                         class="rounded-md"
                                         src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white"
-                                        alt="Made with Styled Components"
                                         title="Made with Styled Components"
+                                        alt="Made with Styled Components"
                                     />
                                 </div>
                                 <div class="flex gap-4">
                                     <a
-                                        href="https://kapaha.github.io/shopping-cart/"
                                         class="flex-grow rounded-md border-2 border-transparent bg-orange-400 px-4 py-2 text-center font-bold uppercase text-zinc-900 hover:border-orange-400 hover:bg-transparent hover:text-white"
+                                        href="https://kapaha.github.io/shopping-cart/"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
                                         Demo
                                     </a>
                                     <a
-                                        href="https://github.com/kapaha/shopping-cart"
                                         class="flex-grow rounded-md border-2 border-transparent bg-orange-400 px-4 py-2 text-center font-bold uppercase text-zinc-900 hover:border-orange-400 hover:bg-transparent hover:text-white"
+                                        href="https://github.com/kapaha/shopping-cart"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
@@ -146,28 +328,28 @@
                                     <img
                                         class="rounded-md"
                                         src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"
-                                        alt="Made with React JS"
                                         title="Made with React JS"
+                                        alt="Made with React JS"
                                     />
                                     <img
                                         class="rounded-md"
                                         src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"
-                                        alt="Made with CSS"
                                         title="Made with CSS"
+                                        alt="Made with CSS"
                                     />
                                 </div>
                                 <div class="flex gap-4">
                                     <a
-                                        href="https://kapaha.github.io/memory-card-game/"
                                         class="flex-grow rounded-md border-2 border-transparent bg-orange-400 px-4 py-2 text-center font-bold uppercase text-zinc-900 hover:border-orange-400 hover:bg-transparent hover:text-white"
+                                        href="https://kapaha.github.io/memory-card-game/"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
                                         Demo
                                     </a>
                                     <a
-                                        href="https://github.com/kapaha/memory-card-game"
                                         class="flex-grow rounded-md border-2 border-transparent bg-orange-400 px-4 py-2 text-center font-bold uppercase text-zinc-900 hover:border-orange-400 hover:bg-transparent hover:text-white"
+                                        href="https://github.com/kapaha/memory-card-game"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
@@ -185,7 +367,7 @@
                                     <img
                                         class="h-full w-full object-cover"
                                         src="assets/images/math-castle-demo.gif"
-                                        alt=""
+                                        alt
                                         width="600"
                                         height="329"
                                     />
@@ -203,34 +385,34 @@
                                     <img
                                         class="rounded-md"
                                         src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"
-                                        alt="Made with HTML"
                                         title="Made with HTML"
+                                        alt="Made with HTML"
                                     />
                                     <img
                                         class="rounded-md"
                                         src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"
-                                        alt="Made with CSS"
                                         title="Made with CSS"
+                                        alt="Made with CSS"
                                     />
                                     <img
                                         class="rounded-md"
                                         src="https://camo.githubusercontent.com/93c855ae825c1757f3426f05a05f4949d3b786c5b22d0edb53143a9e8f8499f6/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4a6176615363726970742d3332333333303f7374796c653d666f722d7468652d6261646765266c6f676f3d6a617661736372697074266c6f676f436f6c6f723d463744463145"
-                                        alt="Made with Javascript"
                                         title="Made with Javascript"
+                                        alt="Made with Javascript"
                                     />
                                 </div>
                                 <div class="flex gap-4">
                                     <a
-                                        href="https://kapaha.github.io/math-castle/"
                                         class="flex-grow rounded-md border-2 border-transparent bg-orange-400 px-4 py-2 text-center font-bold uppercase text-zinc-900 hover:border-orange-400 hover:bg-transparent hover:text-white"
+                                        href="https://kapaha.github.io/math-castle/"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
                                         Demo
                                     </a>
                                     <a
-                                        href="https://github.com/kapaha/math-castle"
                                         class="flex-grow rounded-md border-2 border-transparent bg-orange-400 px-4 py-2 text-center font-bold uppercase text-zinc-900 hover:border-orange-400 hover:bg-transparent hover:text-white"
+                                        href="https://github.com/kapaha/math-castle"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
@@ -266,34 +448,34 @@
                                     <img
                                         class="rounded-md"
                                         src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"
-                                        alt="Made with HTML"
                                         title="Made with HTML"
+                                        alt="Made with HTML"
                                     />
                                     <img
                                         class="rounded-md"
                                         src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"
-                                        alt="Made with CSS"
                                         title="Made with CSS"
+                                        alt="Made with CSS"
                                     />
                                     <img
                                         class="rounded-md"
                                         src="https://camo.githubusercontent.com/93c855ae825c1757f3426f05a05f4949d3b786c5b22d0edb53143a9e8f8499f6/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4a6176615363726970742d3332333333303f7374796c653d666f722d7468652d6261646765266c6f676f3d6a617661736372697074266c6f676f436f6c6f723d463744463145"
-                                        alt="Made with Javascript"
                                         title="Made with Javascript"
+                                        alt="Made with Javascript"
                                     />
                                 </div>
                                 <div class="flex gap-4">
                                     <a
-                                        href="https://kapaha.github.io/weather-app/"
                                         class="flex-grow rounded-md border-2 border-transparent bg-orange-400 px-4 py-2 text-center font-bold uppercase text-zinc-900 hover:border-orange-400 hover:bg-transparent hover:text-white"
+                                        href="https://kapaha.github.io/weather-app/"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
                                         Demo
                                     </a>
                                     <a
-                                        href="https://github.com/kapaha/weather-app"
                                         class="flex-grow rounded-md border-2 border-transparent bg-orange-400 px-4 py-2 text-center font-bold uppercase text-zinc-900 hover:border-orange-400 hover:bg-transparent hover:text-white"
+                                        href="https://github.com/kapaha/weather-app"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
@@ -329,34 +511,34 @@
                                     <img
                                         class="rounded-md"
                                         src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"
-                                        alt="Made with HTML"
                                         title="Made with HTML"
+                                        alt="Made with HTML"
                                     />
                                     <img
                                         class="rounded-md"
                                         src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"
-                                        alt="Made with CSS"
                                         title="Made with CSS"
+                                        alt="Made with CSS"
                                     />
                                     <img
                                         class="rounded-md"
                                         src="https://camo.githubusercontent.com/93c855ae825c1757f3426f05a05f4949d3b786c5b22d0edb53143a9e8f8499f6/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4a6176615363726970742d3332333333303f7374796c653d666f722d7468652d6261646765266c6f676f3d6a617661736372697074266c6f676f436f6c6f723d463744463145"
-                                        alt="Made with Javascript"
                                         title="Made with Javascript"
+                                        alt="Made with Javascript"
                                     />
                                 </div>
                                 <div class="flex gap-4">
                                     <a
-                                        href="https://kapaha.github.io/todo-list/"
                                         class="flex-grow rounded-md border-2 border-transparent bg-orange-400 px-4 py-2 text-center font-bold uppercase text-zinc-900 hover:border-orange-400 hover:bg-transparent hover:text-white"
+                                        href="https://kapaha.github.io/todo-list/"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
                                         Demo
                                     </a>
                                     <a
-                                        href="https://github.com/kapaha/todo-list"
                                         class="flex-grow rounded-md border-2 border-transparent bg-orange-400 px-4 py-2 text-center font-bold uppercase text-zinc-900 hover:border-orange-400 hover:bg-transparent hover:text-white"
+                                        href="https://github.com/kapaha/todo-list"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
@@ -393,34 +575,34 @@
                                     <img
                                         class="rounded-md"
                                         src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"
-                                        alt="Made with HTML"
                                         title="Made with HTML"
+                                        alt="Made with HTML"
                                     />
                                     <img
                                         class="rounded-md"
                                         src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"
-                                        alt="Made with CSS"
                                         title="Made with CSS"
+                                        alt="Made with CSS"
                                     />
                                     <img
                                         class="rounded-md"
                                         src="https://camo.githubusercontent.com/93c855ae825c1757f3426f05a05f4949d3b786c5b22d0edb53143a9e8f8499f6/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4a6176615363726970742d3332333333303f7374796c653d666f722d7468652d6261646765266c6f676f3d6a617661736372697074266c6f676f436f6c6f723d463744463145"
-                                        alt="Made with Javascript"
                                         title="Made with Javascript"
+                                        alt="Made with Javascript"
                                     />
                                 </div>
                                 <div class="flex gap-4">
                                     <a
-                                        href="https://kapaha.github.io/tic-tac-toe/"
                                         class="flex-grow rounded-md border-2 border-transparent bg-orange-400 px-4 py-2 text-center font-bold uppercase text-zinc-900 hover:border-orange-400 hover:bg-transparent hover:text-white"
+                                        href="https://kapaha.github.io/tic-tac-toe/"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
                                         Demo
                                     </a>
                                     <a
-                                        href="https://github.com/kapaha/tic-tac-toe"
                                         class="flex-grow rounded-md border-2 border-transparent bg-orange-400 px-4 py-2 text-center font-bold uppercase text-zinc-900 hover:border-orange-400 hover:bg-transparent hover:text-white"
+                                        href="https://github.com/kapaha/tic-tac-toe"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
@@ -434,7 +616,7 @@
             </div>
 
             <!-- Contact Form -->
-            <div class="p-6 md:p-8 lg:p-10">
+            <div class="p-6 md:p-8 lg:p-10" id="contact">
                 <div
                     class="container mx-auto flex max-w-[600px] flex-col items-center space-y-6 md:space-y-8 lg:space-y-10"
                 >
@@ -452,9 +634,9 @@
                             Interested in discussing a
                             <span class="font-semibold">job opportunity?</span>
                             I'd love to hear from you.
-                            <span class="font-semibold"
-                                >Fill out the form below,</span
-                            >
+                            <span class="font-semibold">
+                                Fill out the form below,
+                            </span>
                             and let's connect.
                         </p>
                     </div>
@@ -464,12 +646,12 @@
                     >
                         <div>
                             <label for="name">Name</label>
-                            <input type="text" id="name" required />
+                            <input id="name" type="text" required />
                         </div>
 
                         <div>
                             <label for="email">Email</label>
-                            <input type="email" id="email" required />
+                            <input id="email" type="email" required />
                         </div>
 
                         <div>
@@ -483,12 +665,13 @@
                         </div>
 
                         <p class="text-neutral-500">
-                            <span class="text-red-400">*</span> Required fields
+                            <span class="text-red-400">*</span>
+                            Required fields
                         </p>
 
                         <button
-                            type="submit"
                             class="!mt-6 block w-full rounded-md bg-orange-400 p-4 text-center font-bold text-white transition-colors hover:bg-zinc-800"
+                            type="submit"
                         >
                             Send Message
                         </button>
@@ -497,6 +680,6 @@
             </div>
         </main>
 
-        <script type="module" src="js/index.js"></script>
+        <script src="js/index.js" type="module"></script>
     </body>
 </html>
