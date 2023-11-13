@@ -42,7 +42,17 @@
                     <a
                         class="block py-2 text-center text-2xl opacity-0 transition-all duration-500 hover:bg-zinc-800 md:text-4xl [.menu-opened_&]:opacity-100"
                         data-mobile-menu-toggler
-                        href="#"
+                        href="./"
+                        tabindex="-1"
+                    >
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a
+                        class="block py-2 text-center text-2xl opacity-0 transition-all duration-500 hover:bg-zinc-800 md:text-4xl [.menu-opened_&]:opacity-100"
+                        data-mobile-menu-toggler
+                        href="about.html"
                         tabindex="-1"
                     >
                         About Me
@@ -52,7 +62,7 @@
                     <a
                         class="block py-2 text-center text-2xl opacity-0 transition-all duration-500 hover:bg-zinc-800 md:text-4xl [.menu-opened_&]:opacity-100"
                         data-mobile-menu-toggler
-                        href="#projects"
+                        href="./#projects"
                         tabindex="-1"
                     >
                         My Projects
@@ -82,7 +92,7 @@
                     <a
                         class="block py-2 text-center text-2xl opacity-0 transition-all duration-500 hover:bg-zinc-800 md:text-4xl [.menu-opened_&]:opacity-100"
                         data-mobile-menu-toggler
-                        href="#contact"
+                        href="./#contact"
                         tabindex="-1"
                     >
                         Contact Me
@@ -127,17 +137,18 @@
         <div
             class="fixed hidden h-full w-[300px] border-r-4 border-orange-400 bg-zinc-900 shadow lg:block"
         >
-            <p
+            <a
                 class="flex items-center justify-center border-b-4 border-orange-400 text-[9rem] font-bold uppercase"
+                href="./"
             >
                 K
-            </p>
+            </a>
 
             <ul class="mt-10 flex flex-col text-center text-2xl">
                 <li>
                     <a
                         class="block py-4 decoration-orange-400 hover:underline"
-                        href="#"
+                        href="about.html"
                     >
                         About Me
                     </a>
@@ -145,7 +156,7 @@
                 <li>
                     <a
                         class="block py-4 decoration-orange-400 hover:underline"
-                        href="#projects"
+                        href="./#projects"
                     >
                         My Projects
                     </a>
@@ -169,7 +180,7 @@
                 <li>
                     <a
                         class="block py-4 decoration-orange-400 hover:underline"
-                        href="#contact"
+                        href="./#contact"
                     >
                         Contact Me
                     </a>
@@ -680,6 +691,6 @@
             </div>
         </main>
 
-        <script src="js/index.js" type="module"></script>
+        <script src="/js/index.js" type="module"></script>
     </body>
 </html>

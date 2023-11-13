@@ -20,3 +20,29 @@ label {
         @apply after:text-red-400 after:content-['_*'];
     }
 }
+
+.easter-egg {
+    position: relative;
+
+    &:after {
+        content: "";
+        position: absolute;
+        inset: 0;
+
+        background-image: url("/kai-funny.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        transition: opacity 1s ease-in-out;
+        opacity: 0;
+    }
+
+    @media screen and (min-width: 1280px) {
+        &:hover {
+            &:after {
+                opacity: 1;
+            }
+        }
+    }
+}

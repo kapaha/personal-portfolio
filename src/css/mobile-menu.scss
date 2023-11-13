@@ -67,6 +67,7 @@ html:has(.header) {
 // ==================================================
 
 .hamburger {
+    flex-shrink: 0;
     padding: $hamburger-padding-y $hamburger-padding-x;
     display: inline-block;
     display: flex;

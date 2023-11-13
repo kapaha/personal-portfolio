@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="/apple-touch-icon.png"
+            rel="apple-touch-icon"
+            sizes="180x180"
+        />
+        <link
+            type="image/png"
+            href="/favicon-32x32.png"
+            rel="icon"
+            sizes="32x32"
+        />
+        <link
+            type="image/png"
+            href="/favicon-16x16.png"
+            rel="icon"
+            sizes="16x16"
+        />
+        <link href="/site.webmanifest" rel="manifest" />
+        <title>Kai Paterson-Hall | About me</title>
+    </head>
+
+    <body class="bg-zinc-900 text-white">
+        <header class="header">
+            <!-- Hamburger button -->
+            <button
+                class="hamburger hamburger--collapse"
+                data-mobile-menu-toggler
+            >
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+
+            <!-- Mobile menu -->
+            <ul class="flex flex-grow flex-col justify-center space-y-4">
+                <li>
+                    <a
+                        class="block py-2 text-center text-2xl opacity-0 transition-all duration-500 hover:bg-zinc-800 md:text-4xl [.menu-opened_&]:opacity-100"
+                        data-mobile-menu-toggler
+                        href="./"
+                        tabindex="-1"
+                    >
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a
+                        class="block py-2 text-center text-2xl opacity-0 transition-all duration-500 hover:bg-zinc-800 md:text-4xl [.menu-opened_&]:opacity-100"
+                        data-mobile-menu-toggler
+                        href="about.html"
+                        tabindex="-1"
+                    >
+                        About Me
+                    </a>
+                </li>
+                <li>
+                    <a
+                        class="block py-2 text-center text-2xl opacity-0 transition-all duration-500 hover:bg-zinc-800 md:text-4xl [.menu-opened_&]:opacity-100"
+                        data-mobile-menu-toggler
+                        href="./#projects"
+                        tabindex="-1"
+                    >
+                        My Projects
+                    </a>
+                </li>
+                <li>
+                    <a
+                        class="block py-2 text-center text-2xl opacity-0 transition-all duration-500 hover:bg-zinc-800 md:text-4xl [.menu-opened_&]:opacity-100"
+                        data-mobile-menu-toggler
+                        href="#"
+                        tabindex="-1"
+                    >
+                        Coding Examples
+                    </a>
+                </li>
+                <li>
+                    <a
+                        class="block py-2 text-center text-2xl opacity-0 transition-all duration-500 hover:bg-zinc-800 md:text-4xl [.menu-opened_&]:opacity-100"
+                        data-mobile-menu-toggler
+                        href="#"
+                        tabindex="-1"
+                    >
+                        SCS Scheme
+                    </a>
+                </li>
+                <li>
+                    <a
+                        class="block py-2 text-center text-2xl opacity-0 transition-all duration-500 hover:bg-zinc-800 md:text-4xl [.menu-opened_&]:opacity-100"
+                        data-mobile-menu-toggler
+                        href="./#contact"
+                        tabindex="-1"
+                    >
+                        Contact Me
+                    </a>
+                </li>
+            </ul>
+
+            <div
+                class="flex items-center justify-evenly gap-4 py-4 opacity-0 transition-opacity duration-500 [.menu-opened_&]:opacity-100"
+            >
+                <a
+                    class="text-4xl transition-colors hover:text-orange-400"
+                    href="https://www.linkedin.com/in/kaipatersonhall/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    tabindex="-1"
+                >
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a
+                    class="text-4xl transition-colors hover:text-orange-400"
+                    href="https://github.com/kapaha"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    tabindex="-1"
+                >
+                    <i class="fa-brands fa-square-github"></i>
+                </a>
+                <a
+                    class="text-4xl transition-colors hover:text-orange-400"
+                    href="https://twitter.com/kapahaweb"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    tabindex="-1"
+                >
+                    <i class="fa-brands fa-square-twitter"></i>
+                </a>
+            </div>
+        </header>
+
+        <!-- Side menu -->
+        <div
+            class="fixed hidden h-full w-[300px] border-r-4 border-orange-400 bg-zinc-900 shadow lg:block"
+        >
+            <a
+                class="flex items-center justify-center border-b-4 border-orange-400 text-[9rem] font-bold uppercase"
+                href="./"
+            >
+                K
+            </a>
+
+            <ul class="mt-10 flex flex-col text-center text-2xl">
+                <li>
+                    <a
+                        class="block py-4 decoration-orange-400 hover:underline"
+                        href="about.html"
+                    >
+                        About Me
+                    </a>
+                </li>
+                <li>
+                    <a
+                        class="block py-4 decoration-orange-400 hover:underline"
+                        href="./#projects"
+                    >
+                        My Projects
+                    </a>
+                </li>
+                <li>
+                    <a
+                        class="block py-4 decoration-orange-400 hover:underline"
+                        href="#"
+                    >
+                        Coding Examples
+                    </a>
+                </li>
+                <li>
+                    <a
+                        class="block py-4 decoration-orange-400 hover:underline"
+                        href="#"
+                    >
+                        SCS Scheme
+                    </a>
+                </li>
+                <li>
+                    <a
+                        class="block py-4 decoration-orange-400 hover:underline"
+                        href="./#contact"
+                    >
+                        Contact Me
+                    </a>
+                </li>
+            </ul>
+
+            <div class="mt-10 flex items-center justify-center gap-4">
+                <a
+                    class="text-4xl transition-colors hover:text-orange-400"
+                    href="https://www.linkedin.com/in/kaipatersonhall/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a
+                    class="text-4xl transition-colors hover:text-orange-400"
+                    href="https://github.com/kapaha"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <i class="fa-brands fa-square-github"></i>
+                </a>
+                <a
+                    class="text-4xl transition-colors hover:text-orange-400"
+                    href="https://twitter.com/kapahaweb"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <i class="fa-brands fa-square-twitter"></i>
+                </a>
+            </div>
+        </div>
+
+        <main class="mt-[60px] lg:ml-[300px] lg:mt-0">
+            <div
+                class="container mx-auto max-w-screen-md space-y-6 p-8 md:space-y-10 md:p-10 lg:p-20"
+            >
+                <h2 class="text-center text-4xl font-bold md:text-5xl">
+                    About
+                    <span class="caption-bottom tracking-wider text-orange-400">
+                        Me
+                    </span>
+                </h2>
+
+                <div
+                    class="easter-egg order-1 mx-auto w-1/2 overflow-hidden rounded-md xl:order-none"
+                >
+                    <img
+                        src="assets/images/kai.jpg"
+                        alt="Kai"
+                        width="400px"
+                        height="400px"
+                    />
+                </div>
+
+                <div class="space-y-4 md:text-lg">
+                    <p>I'm Kai Paterson-Hall, based in Bungay, UK.</p>
+
+                    <p>
+                        I gained valuable experience as a web developer in my
+                        previous role, where I demonstrated consistent growth
+                        and achieved notable accomplishments. With a strong
+                        foundation in web development and a track record of
+                        successfully tackling challenges, I am eager to continue
+                        expanding my skills and knowledge.
+                    </p>
+                </div>
+
+                <div
+                    class="space-y-6 border-t-2 border-t-orange-400 pt-6 md:space-y-10 md:pt-10"
+                >
+                    <h3 class="text-center text-2xl font-bold leading-4">
+                        Skills
+                    </h3>
+                    <ul
+                        class="flex flex-wrap items-center justify-center gap-4 text-black md:text-lg [&>li]:bg-neutral-100"
+                    >
+                        <li class="rounded-full px-4 py-1">
+                            Git Version Control
+                        </li>
+                        <li class="rounded-full px-4 py-1">HTML</li>
+                        <li class="rounded-full px-4 py-1">CSS</li>
+                        <li class="rounded-full px-4 py-1">JavaScript</li>
+                        <li class="rounded-full px-4 py-1">React</li>
+                        <li class="rounded-full px-4 py-1">VUE.JS</li>
+                        <li class="rounded-full px-4 py-1">Nuxt</li>
+                        <li class="rounded-full px-4 py-1">Tailwind CSS</li>
+                        <li class="rounded-full px-4 py-1">Sass</li>
+                    </ul>
+                </div>
+
+                <div
+                    class="space-y-4 border-t-2 border-t-orange-400 pt-6 md:pt-10 md:text-lg"
+                >
+                    <h3 class="mb-4 text-2xl font-bold">Experience</h3>
+                    <div class="flex flex-wrap justify-between">
+                        <p class="text-xl font-medium text-green-500">
+                            Junior Developer - Gfinity PLC
+                        </p>
+                        <p class="text-neutral-400">Sep 22 - Jul 23</p>
+                    </div>
+                    <p>
+                        I was a member of the Stock Informer and GDM (Gfinity
+                        Digital Media) teams, working primarily on the frontend
+                        but also making contributions to the Stock Informer API.
+                    </p>
+                    <p class="bg-zinc-700 px-4 py-1 text-lg">Tech Stack</p>
+                    <p>
+                        Frontend: Nuxt / Vue <br />
+                        Backend: C# (ASP.NET Core) & SQL (Microsoft SQL Server)
+                    </p>
+                    <p class="bg-zinc-700 px-4 py-1 text-lg">
+                        Notable Accomplishments
+                    </p>
+                    <ul class="list-inside list-disc space-y-4">
+                        <li>
+                            Redesigned and implemented product pages for
+                            stockinformer.com, improving the UI and UX of
+                            product listings, and the Stock notification sign-up
+                            workflow
+                        </li>
+                        <li>
+                            Developed and implemented integration with a
+                            third-party service to enable push notifications for
+                            users, providing users with more notification
+                            options
+                        </li>
+                        <li>
+                            Improved team workflow by encouraging and assisting
+                            in moving from a spreadsheet-based task list to a
+                            more comprehensive ticket system utilising ClickUp
+                        </li>
+                        <li>
+                            Implemented the weekly newsletter system for
+                            racinggames.gg, including the development of a user
+                            sign-up process and a customised HTML email template
+                            to be used by the site's chief editor
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <script src="/js/index.js" type="module"></script>
+    </body>
+</html>
