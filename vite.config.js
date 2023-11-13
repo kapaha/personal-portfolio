@@ -12,6 +12,10 @@ export default {
             input: {
                 main: resolve(__dirname, "./src/index.html"),
                 about: resolve(__dirname, "./src/about.html"),
+                codingExamples: resolve(
+                    __dirname,
+                    "./src/coding-examples.html",
+                ),
             },
             output: {
                 entryFileNames: "js/[name]-[hash].js",
