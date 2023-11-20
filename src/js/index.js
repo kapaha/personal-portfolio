@@ -13,9 +13,10 @@ const CSS_CLASS = Object.freeze({
     MOBILE_MENU_OPENED: "mobile-menu-opened",
 });
 
-const SELECTORS = Object.freeze({
+const SELECTOR = Object.freeze({
     MOBILE_MENU_LINKS: ".mobile-menu a",
     MOBILE_MENU_TOGGLERS: "[data-mobile-menu-toggler]",
+    SCROLL_TO_TOP_BTN: ".scroll-to-top",
 });
 
 /*
@@ -25,10 +26,11 @@ DOM Elements
 */
 
 const body = document.body;
-const mobileMenuLinks = document.querySelectorAll(SELECTORS.MOBILE_MENU_LINKS);
+const mobileMenuLinks = document.querySelectorAll(SELECTOR.MOBILE_MENU_LINKS);
 const mobileMenuToggler = document.querySelectorAll(
-    SELECTORS.MOBILE_MENU_TOGGLERS,
+    SELECTOR.MOBILE_MENU_TOGGLERS,
 );
+const scrollToTopBtn = document.querySelector(SELECTOR.SCROLL_TO_TOP_BTN);
 
 /*
 ===============================================================================
@@ -39,6 +41,18 @@ Event Listeners
 mobileMenuToggler.forEach((element) =>
     element.addEventListener("click", toggleMobileMenu),
 );
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+        scrollToTopBtn.classList.remove("hidden");
+    } else {
+        scrollToTopBtn.classList.add("hidden");
+    }
+});
+
+scrollToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
 
 /*
 ===============================================================================
