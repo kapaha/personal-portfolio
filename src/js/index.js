@@ -5,15 +5,29 @@ import "../css/mobile-menu.scss";
 
 /*
 ===============================================================================
-Elements
+Constants
 ===============================================================================
 */
 
-const header = document.querySelector(".header");
-const burger = document.querySelector(".hamburger");
-const mobileMenuLinks = document.querySelectorAll(".header  a");
+const CSS_CLASS = Object.freeze({
+    MOBILE_MENU_OPENED: "mobile-menu-opened",
+});
+
+const SELECTORS = Object.freeze({
+    MOBILE_MENU_LINKS: ".mobile-menu a",
+    MOBILE_MENU_TOGGLERS: "[data-mobile-menu-toggler]",
+});
+
+/*
+===============================================================================
+DOM Elements
+===============================================================================
+*/
+
+const body = document.body;
+const mobileMenuLinks = document.querySelectorAll(SELECTORS.MOBILE_MENU_LINKS);
 const mobileMenuToggler = document.querySelectorAll(
-    "[data-mobile-menu-toggler]",
+    SELECTORS.MOBILE_MENU_TOGGLERS,
 );
 
 /*
@@ -33,25 +47,24 @@ Helper functions
 */
 
 function toggleMobileMenu() {
-    const shouldClose = header.classList.contains("menu-opened");
+    const shouldOpen = !body.classList.contains(CSS_CLASS.MOBILE_MENU_OPENED);
 
-    if (shouldClose) {
-        closeMobileMenu();
-    } else {
+    if (shouldOpen) {
         openMobileMenu();
+        return;
     }
+
+    closeMobileMenu();
 }
 
 function closeMobileMenu() {
-    header.classList.remove("menu-opened");
-    burger.classList.remove("is-active");
+    body.classList.remove(CSS_CLASS.MOBILE_MENU_OPENED);
 
     mobileMenuLinks.forEach((link) => (link.tabIndex = -1));
 }
 
 function openMobileMenu() {
-    header.classList.add("menu-opened");
-    burger.classList.add("is-active");
+    body.classList.add(CSS_CLASS.MOBILE_MENU_OPENED);
 
     mobileMenuLinks.forEach((link) => (link.tabIndex = 0));
 }

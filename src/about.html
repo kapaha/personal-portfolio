@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html class="scroll-smooth lg:scroll-pt-0" lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -35,74 +35,76 @@
                     <span class="hamburger-inner"></span>
                 </span>
             </button>
+        </header>
 
-            <!-- Mobile menu -->
-            <ul class="flex flex-grow flex-col justify-center space-y-4">
-                <li>
-                    <a
-                        class="block py-2 text-center text-2xl opacity-0 transition-all duration-500 hover:bg-zinc-800 md:text-4xl [.menu-opened_&]:opacity-100"
-                        data-mobile-menu-toggler
-                        href="./"
-                        tabindex="-1"
-                    >
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <a
-                        class="block py-2 text-center text-2xl opacity-0 transition-all duration-500 hover:bg-zinc-800 md:text-4xl [.menu-opened_&]:opacity-100"
-                        data-mobile-menu-toggler
-                        href="about.html"
-                        tabindex="-1"
-                    >
-                        About Me
-                    </a>
-                </li>
-                <li>
-                    <a
-                        class="block py-2 text-center text-2xl opacity-0 transition-all duration-500 hover:bg-zinc-800 md:text-4xl [.menu-opened_&]:opacity-100"
-                        data-mobile-menu-toggler
-                        href="./#projects"
-                        tabindex="-1"
-                    >
-                        My Projects
-                    </a>
-                </li>
-                <li>
-                    <a
-                        class="block py-2 text-center text-2xl opacity-0 transition-all duration-500 hover:bg-zinc-800 md:text-4xl [.menu-opened_&]:opacity-100"
-                        data-mobile-menu-toggler
-                        href="coding-examples.html"
-                        tabindex="-1"
-                    >
-                        Coding Examples
-                    </a>
-                </li>
-                <li>
-                    <a
-                        class="block py-2 text-center text-2xl opacity-0 transition-all duration-500 hover:bg-zinc-800 md:text-4xl [.menu-opened_&]:opacity-100"
-                        data-mobile-menu-toggler
-                        href="#"
-                        tabindex="-1"
-                    >
-                        SCS Scheme
-                    </a>
-                </li>
-                <li>
-                    <a
-                        class="block py-2 text-center text-2xl opacity-0 transition-all duration-500 hover:bg-zinc-800 md:text-4xl [.menu-opened_&]:opacity-100"
-                        data-mobile-menu-toggler
-                        href="./#contact"
-                        tabindex="-1"
-                    >
-                        Contact Me
-                    </a>
-                </li>
-            </ul>
+        <!-- Mobile menu -->
+        <div class="mobile-menu">
+            <nav>
+                <ul>
+                    <li>
+                        <a
+                            class="text-2xl transition-colors duration-500 hover:bg-zinc-800 md:text-4xl"
+                            data-mobile-menu-toggler
+                            href="./"
+                            tabindex="-1"
+                        >
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            class="text-2xl transition-colors duration-500 hover:bg-zinc-800 md:text-4xl"
+                            data-mobile-menu-toggler
+                            href="about.html"
+                            tabindex="-1"
+                        >
+                            About Me
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            class="text-2xl transition-colors duration-500 hover:bg-zinc-800 md:text-4xl"
+                            data-mobile-menu-toggler
+                            href="./#projects"
+                            tabindex="-1"
+                        >
+                            My Projects
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            class="text-2xl transition-colors duration-500 hover:bg-zinc-800 md:text-4xl"
+                            data-mobile-menu-toggler
+                            href="coding-examples.html"
+                            tabindex="-1"
+                        >
+                            Coding Examples
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            class="text-2xl transition-colors duration-500 hover:bg-zinc-800 md:text-4xl"
+                            data-mobile-menu-toggler
+                            href="#"
+                            tabindex="-1"
+                        >
+                            SCS Scheme
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            class="text-2xl transition-colors duration-500 hover:bg-zinc-800 md:text-4xl"
+                            data-mobile-menu-toggler
+                            href="./#contact"
+                            tabindex="-1"
+                        >
+                            Contact Me
+                        </a>
+                    </li>
+                </ul>
+            </nav>
 
-            <div
-                class="flex items-center justify-evenly gap-4 py-4 opacity-0 transition-opacity duration-500 [.menu-opened_&]:opacity-100"
-            >
+            <div class="mobile-menu__socials">
                 <a
                     class="text-4xl transition-colors hover:text-orange-400"
                     href="https://www.linkedin.com/in/kaipatersonhall/"
@@ -131,7 +133,7 @@
                     <i class="fa-brands fa-square-twitter"></i>
                 </a>
             </div>
-        </header>
+        </div>
 
         <!-- Side menu -->
         <div
