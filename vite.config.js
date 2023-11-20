@@ -16,6 +16,7 @@ export default {
                     __dirname,
                     "./src/coding-examples.html",
                 ),
+                scsScheme: resolve(__dirname, "./src/scs-scheme.html"),
             },
             output: {
                 entryFileNames: "js/[name]-[hash].js",
