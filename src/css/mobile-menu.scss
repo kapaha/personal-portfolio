@@ -33,6 +33,10 @@ $headerHeight: 60px;
 
 html:has(.header) {
     scroll-padding-top: $headerHeight;
+
+    @media screen and (min-width: 1024px) {
+        scroll-padding-top: 0;
+    }
 }
 
 // Body
