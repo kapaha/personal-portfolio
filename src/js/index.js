@@ -1,5 +1,6 @@
 import "../css/index.scss";
 import "../css/fontawesome.css";
+import "../css/solid.css";
 import "../css/brands.css";
 import "../css/mobile-menu.scss";
 
