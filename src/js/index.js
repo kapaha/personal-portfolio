@@ -1,3 +1,5 @@
+import { createTyped } from "./typed";
+
 import "../css/index.scss";
 import "../css/fontawesome.css";
 import "../css/solid.css";
@@ -10,7 +12,7 @@ Constants
 ===============================================================================
 */
 
-const CSS_CLASS = Object.freeze({
+const HTML_CLASS = Object.freeze({
     MOBILE_MENU_OPENED: "mobile-menu-opened",
 });
 
@@ -18,6 +20,8 @@ const SELECTOR = Object.freeze({
     MOBILE_MENU_LINKS: ".mobile-menu a",
     MOBILE_MENU_TOGGLERS: "[data-mobile-menu-toggler]",
     SCROLL_TO_TOP_BTN: ".scroll-to-top",
+    TYPE_EFFECT: "#type-effect",
+    TYPE_CURSOR: "#type-cursor",
 });
 
 /*
@@ -32,6 +36,8 @@ const mobileMenuToggler = document.querySelectorAll(
     SELECTOR.MOBILE_MENU_TOGGLERS,
 );
 const scrollToTopBtn = document.querySelector(SELECTOR.SCROLL_TO_TOP_BTN);
+const typeEffectEl = document.querySelector(SELECTOR.TYPE_EFFECT);
+const typeCursorEl = document.querySelector(SELECTOR.TYPE_CURSOR);
 
 /*
 ===============================================================================
@@ -53,12 +59,22 @@ window.addEventListener("scroll", () => {
 
 /*
 ===============================================================================
+Main()
+===============================================================================
+*/
+
+const typed = createTyped(typeEffectEl, typeCursorEl);
+
+typed.start();
+
+/*
+===============================================================================
 Helper functions
 ===============================================================================
 */
 
 function toggleMobileMenu() {
-    const shouldOpen = !body.classList.contains(CSS_CLASS.MOBILE_MENU_OPENED);
+    const shouldOpen = !body.classList.contains(HTML_CLASS.MOBILE_MENU_OPENED);
 
     if (shouldOpen) {
         openMobileMenu();
@@ -69,13 +85,13 @@ function toggleMobileMenu() {
 }
 
 function closeMobileMenu() {
-    body.classList.remove(CSS_CLASS.MOBILE_MENU_OPENED);
+    body.classList.remove(HTML_CLASS.MOBILE_MENU_OPENED);
 
     mobileMenuLinks.forEach((link) => (link.tabIndex = -1));
 }
 
 function openMobileMenu() {
-    body.classList.add(CSS_CLASS.MOBILE_MENU_OPENED);
+    body.classList.add(HTML_CLASS.MOBILE_MENU_OPENED);
 
     mobileMenuLinks.forEach((link) => (link.tabIndex = 0));
 }
