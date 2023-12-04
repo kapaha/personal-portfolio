@@ -1,4 +1,4 @@
-export function createTyped(
+export function createTyper(
     typedElement,
     cursorElement,
     {

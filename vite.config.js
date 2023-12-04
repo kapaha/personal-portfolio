@@ -10,7 +10,7 @@ export default {
         emptyOutDir: true,
         rollupOptions: {
             input: {
-                main: resolve(__dirname, "./src/index.html"),
+                home: resolve(__dirname, "./src/index.html"),
                 about: resolve(__dirname, "./src/about.html"),
                 codingExamples: resolve(
                     __dirname,
