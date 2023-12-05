@@ -12,10 +12,7 @@ export default {
             input: {
                 home: resolve(__dirname, "./src/index.html"),
                 about: resolve(__dirname, "./src/about.html"),
-                codingExamples: resolve(
-                    __dirname,
-                    "./src/coding-examples.html",
-                ),
+                codeSnippets: resolve(__dirname, "./src/code-snippets.html"),
                 scsScheme: resolve(__dirname, "./src/scs-scheme.html"),
             },
             output: {
