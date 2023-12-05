@@ -4,7 +4,7 @@ export function createTyper(
     {
         removeIntervalMs = 150,
         removeStartDelayMs = 1500,
-        wordList = ["Web Developer", "Father", "Gamer"],
+        wordList = ["Hello", "World"],
     } = {},
 ) {
     if (!typedElement) {
@@ -22,14 +22,14 @@ export function createTyper(
     let currentWordIndex = 0;
     let word = wordList[currentWordIndex];
 
-    function startAdder() {
+    function startAddingLetters() {
         let index = 1;
 
         adderIntervalId = setInterval(() => {
             if (typedElement.textContent === word) {
                 clearInterval(adderIntervalId);
 
-                startRemover();
+                startRemovingLetters();
 
                 return;
             }
@@ -40,7 +40,7 @@ export function createTyper(
         }, removeIntervalMs);
     }
 
-    async function startRemover() {
+    async function startRemovingLetters() {
         await new Promise((resolve) => {
             cursorElement.classList.add("animate-pulse");
             setTimeout(resolve, removeStartDelayMs);
@@ -59,7 +59,7 @@ export function createTyper(
 
                 word = wordList[currentWordIndex];
 
-                startAdder();
+                startAddingLetters();
 
                 return;
             }
@@ -68,5 +68,5 @@ export function createTyper(
         }, removeIntervalMs);
     }
 
-    return Object.freeze({ start: startRemover });
+    return Object.freeze({ start: startRemovingLetters });
 }

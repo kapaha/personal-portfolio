@@ -27,7 +27,9 @@ const elements = {
 };
 
 // Start typing animation
-createTyper(elements.typeEffect, elements.typeCursor).start();
+createTyper(elements.typeEffect, elements.typeCursor, {
+    wordList: ["Web Developer", "Father", "Gamer"],
+}).start();
 
 // Initialise contact form
 const fields = createFieldGroup([
