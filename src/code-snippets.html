@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html class="scroll-smooth" lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -21,7 +22,7 @@
             sizes="16x16"
         />
         <link href="/site.webmanifest" rel="manifest" />
-        <title>Kai Paterson-Hall | Coding Examples</title>
+        <title>Kai Paterson-Hall | Code Snippets</title>
     </head>
 
     <body class="bg-zinc-900 text-white">
@@ -75,10 +76,10 @@
                         <a
                             class="text-2xl transition-colors duration-500 hover:bg-zinc-800 md:text-4xl"
                             data-mobile-menu-toggler
-                            href="coding-examples.html"
+                            href="code-snippets.html"
                             tabindex="-1"
                         >
-                            Coding Examples
+                            Code Snippets
                         </a>
                     </li>
                     <li>
@@ -166,9 +167,9 @@
                 <li>
                     <a
                         class="block py-4 decoration-orange-400 hover:underline"
-                        href="coding-examples.html"
+                        href="code-snippets.html"
                     >
-                        Coding Examples
+                        Code Snippets
                     </a>
                 </li>
                 <li>
@@ -217,25 +218,71 @@
             </div>
         </div>
 
-        <main
-            class="grid h-dynamic-screen place-items-center items-center lg:ml-[300px]"
-        >
+        <main class="mt-[60px] lg:ml-[300px] lg:mt-0">
             <div
-                class="container mx-auto max-w-screen-lg space-y-6 p-8 md:space-y-10 md:p-10 lg:p-20"
+                class="container mx-auto max-w-screen-md space-y-6 p-8 md:space-y-10 md:p-10 lg:p-20"
             >
-                <h2 class="text-center text-4xl font-bold md:text-5xl">
-                    Coding
+                <h1 class="text-center text-4xl font-bold md:text-5xl">
+                    Code
                     <span class="caption-bottom tracking-wider text-orange-400">
-                        Examples
+                        Snippets
                     </span>
+                </h1>
+
+                <h2 class="!mt-10 text-2xl font-bold lg:!mt-20">
+                    Mobile menu factory
                 </h2>
 
-                <div>
-                    <img
-                        class="mx-auto"
-                        src="assets/images/coming-soon.png"
-                        alt="Coming Soon"
-                    />
+                <pre class="!max-w-full"><code>export function createMobileMenu(
+    bodyOpenClass,
+    mobileMenuTogglers,
+    mobileMenuLinks,
+) {
+    function _toggleMobileMenu() {
+        const shouldOpen = !document.body.classList.contains(bodyOpenClass);
+
+        const classListMethod = shouldOpen ? "add" : "remove";
+        const tabIndex = shouldOpen ? 0 : -1;
+
+        document.body.classList[classListMethod](bodyOpenClass);
+
+        mobileMenuLinks.forEach((link) => (link.tabIndex = tabIndex));
+    }
+
+    function init() {
+        mobileMenuTogglers.forEach((element) =>
+            element.addEventListener("click", _toggleMobileMenu),
+        );
+    }
+
+    return Object.freeze({
+        init,
+    });
+}</code></pre>
+                <div class="space-y-4 md:text-lg xl:text-xl">
+                    <p>
+                        This code snippet defines a factory function (a function
+                        used to create objects) for creating a mobile menu
+                        object. When the init function is run on the mobile menu
+                        object, click event handlers are setup for the supplied
+                        elements, which will do the following:
+                    </p>
+
+                    <ul class="ml-5 list-disc space-y-2">
+                        <li>
+                            Toggle the body class (used for styling menu
+                            elements)
+                        </li>
+                        <li>
+                            Toggle the ability to tab to links within the menu
+                            (improving accessibility)
+                        </li>
+                    </ul>
+
+                    <p>
+                        This modular approach allows easy integration into other
+                        projects, promoting code reusability.
+                    </p>
                 </div>
             </div>
         </main>
@@ -249,6 +296,6 @@
             <i class="fa-solid fa-arrow-up"></i>
         </a>
 
-        <script src="/js/shared.js" type="module"></script>
+        <script src="/js/code-snippets.js" type="module"></script>
     </body>
 </html>
