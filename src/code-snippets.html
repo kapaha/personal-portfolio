@@ -229,11 +229,14 @@
                     </span>
                 </h1>
 
-                <h2 class="!mt-10 text-2xl font-bold lg:!mt-20">
-                    Mobile menu factory
-                </h2>
+                <div class="space-y-6 md:space-y-10">
+                    <h2 class="!mt-10 text-2xl font-bold lg:!mt-20">
+                        Mobile menu factory
+                    </h2>
 
-                <pre class="!max-w-full"><code>export function createMobileMenu(
+                    <pre
+                        class="!max-w-full"
+                    ><code>export function createMobileMenu(
     bodyOpenClass,
     mobileMenuTogglers,
     mobileMenuLinks,
@@ -259,30 +262,85 @@
         init,
     });
 }</code></pre>
-                <div class="space-y-4 md:text-lg xl:text-xl">
-                    <p>
-                        This code snippet defines a factory function (a function
-                        used to create objects) for creating a mobile menu
-                        object. When the init function is run on the mobile menu
-                        object, click event handlers are setup for the supplied
-                        elements, which will do the following:
-                    </p>
+                    <div class="space-y-4 md:text-lg xl:text-xl">
+                        <p>
+                            This code snippet defines a factory function (a
+                            function used to create objects) for creating a
+                            mobile menu object. When the init function is run on
+                            the mobile menu object, click event handlers are
+                            setup for the supplied elements, which will do the
+                            following:
+                        </p>
 
-                    <ul class="ml-5 list-disc space-y-2">
-                        <li>
-                            Toggle the body class (used for styling menu
-                            elements)
-                        </li>
-                        <li>
-                            Toggle the ability to tab to links within the menu
-                            (improving accessibility)
-                        </li>
-                    </ul>
+                        <ul class="ml-5 list-disc space-y-2">
+                            <li>
+                                Toggle the body class (used for styling menu
+                                elements)
+                            </li>
+                            <li>
+                                Toggle the ability to tab to links within the
+                                menu (improving accessibility)
+                            </li>
+                        </ul>
 
-                    <p>
-                        This modular approach allows easy integration into other
-                        projects, promoting code reusability.
-                    </p>
+                        <p>
+                            This modular approach allows easy integration into
+                            other projects, promoting code reusability.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="space-y-6 md:space-y-10">
+                    <h2 class="!mt-10 text-2xl font-bold lg:!mt-20">
+                        addGlobalEventListener Function
+                    </h2>
+                    <pre
+                        class="!max-w-full"
+                    ><code>export function addGlobalEventListener(type, selector, callback) {
+    document.addEventListener(type, (e) => {
+        if (e.target.closest(selector)) callback(e);
+    });
+}</code></pre>
+
+                    <div class="space-y-4 md:text-lg xl:text-xl">
+                        <p>
+                            This function, <code>addGlobalEventListener</code>,
+                            is a utility to add event listeners globally to the
+                            document, but only trigger the callback when events
+                            originate from elements that match a specific CSS
+                            selector.
+                        </p>
+                        <ul class="ml-5 list-disc space-y-2">
+                            <li>
+                                <strong>type</strong>: The type of event to
+                                listen for (e.g., 'click', 'mouseover').
+                            </li>
+                            <li>
+                                <strong>selector</strong>: A CSS selector string
+                                used to filter events based on the originating
+                                element.
+                            </li>
+                            <li>
+                                <strong>callback</strong>: The function to
+                                execute when the event occurs on an element that
+                                matches the selector.
+                            </li>
+                        </ul>
+                        <p>
+                            The function works by attaching an event listener to
+                            the entire document. Inside the event listener, it
+                            checks if the event's target element, or any of its
+                            ancestors, matches the provided selector. If a match
+                            is found, the callback function is executed.
+                        </p>
+                        <p>
+                            This approach is particularly useful for handling
+                            events on elements that are dynamically added to the
+                            page, as the event listener is attached to a
+                            permanent element (the document) rather than the
+                            dynamic elements themselves.
+                        </p>
+                    </div>
                 </div>
             </div>
         </main>

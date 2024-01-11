@@ -11,9 +11,12 @@ Main()
 */
 
 const elements = {
-    code: document.querySelector("code"),
+    code: document.querySelectorAll("code"),
 };
 
 // Initialise code formatting
 hljs.registerLanguage("javascript", javascript);
-hljs.highlightElement(elements.code);
+
+for (const element of elements.code) {
+    hljs.highlightElement(element);
+}
