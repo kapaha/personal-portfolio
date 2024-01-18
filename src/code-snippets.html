@@ -229,6 +229,7 @@
                     </span>
                 </h1>
 
+                <!-- Code Snippet -->
                 <div class="space-y-6 md:space-y-10">
                     <h2 class="!mt-10 text-2xl font-bold lg:!mt-20">
                         Mobile menu factory
@@ -290,6 +291,7 @@
                     </div>
                 </div>
 
+                <!-- Code Snippet -->
                 <div class="space-y-6 md:space-y-10">
                     <h2 class="!mt-10 text-2xl font-bold lg:!mt-20">
                         addGlobalEventListener Function
@@ -340,6 +342,96 @@
                             permanent element (the document) rather than the
                             dynamic elements themselves.
                         </p>
+                    </div>
+                </div>
+
+                <!-- Code Snippet -->
+                <div class="space-y-6 md:space-y-10">
+                    <h2 class="!mt-10 text-2xl font-bold lg:!mt-20">
+                        Storage module
+                    </h2>
+                    <pre
+                        class="!max-w-full"
+                    ><code>const STORAGE_KEY_USERS = "USERS";
+const STORAGE_KEY_ACTIVE_USER_ID = "ACTIVE_USER_ID";
+
+function get(key) {
+    return JSON.parse(localStorage.getItem(key));
+}
+
+function set(key, value) {
+    localStorage.setItem(key, JSON.stringify(value));
+}
+
+function getUsers() {
+    return get(STORAGE_KEY_USERS);
+}
+
+function setUsers(users) {
+    set(STORAGE_KEY_USERS, users);
+}
+
+function getActiveUser() {
+    return get(STORAGE_KEY_ACTIVE_USER_ID);
+}
+
+function setActiveUser(activeUser) {
+    set(STORAGE_KEY_ACTIVE_USER_ID, activeUser);
+}
+
+export default {
+    getUsers,
+    setUsers,
+    getActiveUser,
+    setActiveUser,
+};</code></pre>
+
+                    <div class="space-y-4 md:text-lg xl:text-xl">
+                        <p>
+                            This code snippet demonstrates a practical approach
+                            to manage user data in web applications using the
+                            Web Storage API's <code>localStorage</code>. It
+                            consists of utility functions for handling
+                            operations like retrieving and storing user
+                            information and the active user's ID. The snippet is
+                            particularly useful for applications that require
+                            client-side state management without a backend
+                            database.
+                        </p>
+                        <h3>Key Features:</h3>
+                        <ul class="ml-5 list-disc space-y-2">
+                            <li>
+                                <strong>Storage Keys:</strong> Uses constants
+                                <code>STORAGE_KEY_USERS</code> and
+                                <code>STORAGE_KEY_ACTIVE_USER_ID</code> as keys
+                                for <code>localStorage</code>.
+                            </li>
+                            <li>
+                                <strong>get and set Functions:</strong>
+                                Abstracts <code>localStorage</code> operations
+                                for parsing and stringifying JavaScript objects.
+                            </li>
+                            <li>
+                                <strong>User Management Functions:</strong>
+                                <ul class="ml-5 list-disc space-y-2">
+                                    <li>
+                                        <code>getUsers</code> and
+                                        <code>setUsers</code> for handling the
+                                        users' list.
+                                    </li>
+                                    <li>
+                                        <code>getActiveUser</code> and
+                                        <code>setActiveUser</code> for managing
+                                        the active user ID.
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <strong>Modular Export:</strong> Functions are
+                                exported as a module for easy reuse across the
+                                application.
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
