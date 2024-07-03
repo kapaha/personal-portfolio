@@ -1,11 +1,60 @@
 export function createForm(form, fields) {
     function init() {
         form.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            const successEl = document.querySelector(".success");
+            const errorEl = document.querySelector(".form-error");
+
+            errorEl.classList.add("hidden");
+            successEl.classList.add("hidden");
+
             const shouldSubmit = fields.areValid();
 
             if (!shouldSubmit) {
-                event.preventDefault();
+                return;
             }
+
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+            let formHasSubmitted = false;
+
+            fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: json,
+            })
+                .then((response) => {
+                    if (response.status === 200) {
+                        formHasSubmitted = true;
+                    } else {
+                        throw new Error();
+                    }
+                })
+                .catch(() => {})
+                .then(function () {
+                    if (!formHasSubmitted) {
+                        errorEl.classList.remove("hidden");
+
+                        setTimeout(() => {
+                            errorEl.classList.add("hidden");
+                        }, 3000);
+
+                        return;
+                    }
+
+                    form.reset();
+
+                    successEl.classList.remove("hidden");
+                    setTimeout(() => {
+                        successEl.classList.add("hidden");
+                    }, 3000);
+                });
         });
     }
 

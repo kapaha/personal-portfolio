@@ -691,9 +691,40 @@
                         class="w-full space-y-4 rounded-md bg-neutral-100 p-6 text-black shadow-md"
                         novalidate
                     >
+                        <!-- Web3Forms Options -->
+
+                        <!-- REQUIRED: Your Access key here. Don't worry this can be public -->
+                        <input
+                            type="hidden"
+                            name="access_key"
+                            value="7cd9491a-6504-40b2-806b-9e1398191c28"
+                        />
+
+                        <!-- Optional: Subject an be prefilled using type="hidden" or type="text" for normal user submitted input -->
+                        <input
+                            type="hidden"
+                            name="subject"
+                            value="New Submission from Web3Forms"
+                        />
+
+                        <!-- Optional: From Name you want to see in the email Default is "Notifications". you can overwrite here -->
+                        <input
+                            type="hidden"
+                            name="from_name"
+                            value="kapaha.co.uk"
+                        />
+
+                        <!-- Optional: But Recommended: To Prevent SPAM Submission.  Make sure its hidden by default -->
+                        <input
+                            type="checkbox"
+                            name="botcheck"
+                            class="hidden"
+                            style="display: none"
+                        />
+
                         <div>
                             <label for="name">Name</label>
-                            <input id="name" type="text" required />
+                            <input id="name" name="name" type="text" required />
                             <p
                                 id="name-error"
                                 class="mt-3 hidden rounded-md bg-red-100 px-2 py-1 text-red-700"
@@ -707,7 +738,12 @@
 
                         <div>
                             <label for="email">Email</label>
-                            <input id="email" type="email" required />
+                            <input
+                                id="email"
+                                name="email"
+                                type="email"
+                                required
+                            />
                             <p
                                 id="email-error"
                                 class="mt-3 hidden rounded-md bg-red-100 px-2 py-1 text-red-700"
@@ -724,6 +760,7 @@
                             <textarea
                                 class="resize-none"
                                 id="message"
+                                name="message"
                                 rows="10"
                                 required
                             ></textarea>
@@ -749,6 +786,18 @@
                         >
                             Send Message
                         </button>
+
+                        <div
+                            class="success hidden rounded bg-green-100 px-4 py-2 text-green-700"
+                        >
+                            Thank you! The form has been submitted successfully.
+                        </div>
+
+                        <div
+                            class="form-error hidden rounded bg-red-100 px-4 py-2 text-red-700"
+                        >
+                            Something went wrong! Please try again.
+                        </div>
                     </form>
                 </div>
             </div>
